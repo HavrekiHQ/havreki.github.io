@@ -50,3 +50,59 @@ body{
 	z-index: 1;
 	filter: blur(15px);
 }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000000;
+}
+
+.ring {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(45deg,transparent,transparent 50%,#f3f3fe);
+    animation: disappear 2s forwards, spin 1.5s linear infinite;
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.name {
+    position: absolute;
+    opacity: 0;
+    color: white;
+    font-size: 2em;
+    animation: glow 2s 2s forwards;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white;
+    }
+}
