@@ -88,12 +88,25 @@ body {
     }
 }
 
+body {
+    animation: background 4s 4s forwards;
+}
+
+@keyframes background {
+    0% {
+        background-color: black;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
 .name {
     position: absolute;
     opacity: 0;
     color: white;
     font-size: 2em;
-    animation: glow 2s 2s forwards;
+    animation: glow 2s 2s forwards, fadeout 2s 4s forwards;
 }
 
 @keyframes glow {
@@ -106,3 +119,13 @@ body {
         text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white;
     }
 }
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
