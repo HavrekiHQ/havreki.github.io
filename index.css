@@ -105,7 +105,7 @@ body {
     position: absolute;
     opacity: 0;
     color: white;
-    font-size: 5em;
+    font-size: 2em;
     font-weight: bold;
     animation: glow 2s 2s forwards, fadeout 2s 4s forwards;
 }
